@@ -9,4 +9,4 @@ Once all the script finishes running within a notebook, a `statement.csv` file w
 
 ## Single Page Converter: sp_converter.ipynb
 
-This script is currently only capable of converting statements that follow the [single page converter template](./assets/sp-converter-sample-template.jpg). These statements can only have its transactions within one page.
+This script is currently only capable of converting statements that follow the [single page converter template](./assets/sp-converter-sample-template.jpg). While these statements can have multiple pages, this script will only look at transactions within the first page.
