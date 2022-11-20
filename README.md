@@ -1,6 +1,6 @@
 # HSBC Bank Statement Converter
 
-This repository holds Python Notebook scripts to convert HSBC bank statements into CSV files. To generate a CSV file for your statements, simply put your e-bank statements into the `statements` directory. You can find example templates of statements that have been used to test these scripts in the ![assets](./assets) directory.
+This repository holds Python Notebook scripts to convert HSBC bank statements into CSV files. To generate a CSV file for your statements, simply put your e-bank statements into the `statements` directory. You can find example templates of statements that have been used to test these scripts in the [assets](./assets) directory.
 
 All statements that go into the `statements` directory must follow the following naming convention:
 `YYYY-MM.pdf`
