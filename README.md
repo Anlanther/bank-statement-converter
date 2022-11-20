@@ -9,7 +9,7 @@ Once all the script finishes running within a notebook, a `statement.csv` file w
 
 ## Single Page Converter: sp_converter.ipynb
 
-This script is currently only capable of converting statements that follow the ![single page converter template](./assets/sp-converter-sample-template.jpg). While these statements can have multiple pages, this script will only look at transactions within the first page.
+This script is currently only capable of converting statements that follow the [single page converter template](./assets/sp-converter-sample-template.jpg). While these statements can have multiple pages, this script will only look at transactions within the first page.
 
 ### How does it work?
 
@@ -26,7 +26,7 @@ It is observed that when multiple transactions are done on the same day, the row
 
 ## Multi-Page Converter: mp_converter.ipynb
 
-This script is capable of converting statements that hold multiple pages, but following the structure of integrated statements, as shown in ![multi-page converter template](./assets/mp-converter-sample-template.jpeg).
+This script is capable of converting statements that hold multiple pages, but following the structure of integrated statements, as shown in [multi-page converter template](./assets/mp-converter-sample-template.jpeg).
 
 ### How does it work?
 
