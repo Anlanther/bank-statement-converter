@@ -4,3 +4,6 @@
 */test/*
 */*statements/*
 *.csv
+
+*__pycache__*
+/statements/*
