@@ -22,6 +22,21 @@ def convert(invoices: str, bank: Bank) -> pd.DataFrame:
     df = pd.DataFrame(statement_dict, columns=["Date", "Transaction_Details", "Amount", "Balance"])
     return df
 
+def extract_net_position(invoices: str, bank: Bank):
+    """
+    Extracts net position from statement file and then converts it to a DataFrame.
+    """
+    statement_factory = StatementFactory.create_statement(bank)
+    net_position_list = []
+    
+    for invoice in invoices:
+        text = extract_text_from_pdf(invoice)
+        net_position = statement_factory.get_total(invoice, text)
+        net_position_list.append(net_position)
+        
+    df = pd.DataFrame(net_position_list).sort_values('date', ascending=True).reset_index(drop=True)
+    return df
+
 def prepare_statement_dict(statement_dict, temp_row, factory, statement, invoice_name):
     for line in statement:
         items = factory.adjust_year(line, invoice_name).split()
@@ -53,7 +68,6 @@ def prepare_statement_dict(statement_dict, temp_row, factory, statement, invoice
         
     if factory.amount_in_first_row:
         enter_row_into_statement_dict(statement_dict, temp_row["date"], temp_row["details"], "", temp_row["balance"])
-
             
 def add_to_previous_details(temp_row, items):    
     temp_row["details"] = temp_row["details"] + " " + " ".join(items)

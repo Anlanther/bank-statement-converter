@@ -86,3 +86,11 @@ class HSBCOneStatement(Statement):
         date_in_line = re.search(self.date_format, line)
         
         return True if date_in_line else False
+
+    def get_total(self, path: str, text: str):
+        start_identifier = 'Net Position'
+        line_with_amount = next(s for s in text.split("\n") if start_identifier in s)
+        amount = float(line_with_amount.split(' ')[-1].replace(',', ''))
+        statement_date = re.search(r'(\d{4}-\d{2})', path).group(1)
+        
+        return {'date': statement_date, 'amount': amount}

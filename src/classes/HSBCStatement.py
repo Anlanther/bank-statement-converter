@@ -49,3 +49,6 @@ class HSBCStatement(Statement):
         date_in_line = re.search(self.date_format, line)
         
         return True if date_in_line else False
+
+    def get_total(self, path: str, text: str):
+        raise ValueError("No implementation for this statement")
