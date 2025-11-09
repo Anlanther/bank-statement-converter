@@ -2,6 +2,7 @@ from enums.Bank import Bank
 
 # from models import StatementClassDict
 from .BOCStatement import BOCStatement
+from .CitiStatement import CitiStatement
 from .HSBCOneStatement import HSBCOneStatement
 from .HSBCStatement import HSBCStatement
 from .SCStatement import SCStatement
@@ -15,6 +16,7 @@ class StatementFactory:
         Bank.HSBC: HSBCStatement,
         Bank.HSBC_ONE: HSBCOneStatement,
         Bank.SC: SCStatement,
-        Bank.BOC: BOCStatement
+        Bank.BOC: BOCStatement,
+        Bank.CITI: CitiStatement
         }    
         return statement_map[statement_type]()
