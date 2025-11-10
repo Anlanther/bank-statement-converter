@@ -7,3 +7,4 @@ class Bank(Enum):
     SC = "sc"
     BOC = "boc"
     CITI = 'citi'
+    HS = 'hs'
