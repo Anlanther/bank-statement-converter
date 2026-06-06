@@ -1,4 +1,0 @@
-pdfplumber
-pandas
-datetime
-ipykernel

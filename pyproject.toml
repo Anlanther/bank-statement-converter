@@ -1,0 +1,22 @@
+[project]
+name = "bank-statement-converter"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Anlanther" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "datetime>=6.0",
+    "ipykernel>=7.2.0",
+    "pandas>=3.0.3",
+    "pdfplumber>=0.11.9",
+]
+
+[project.scripts]
+bank-statement-converter = "bank_statement_converter:main"
+
+[build-system]
+requires = ["uv_build>=0.10.10,<0.11.0"]
+build-backend = "uv_build"
